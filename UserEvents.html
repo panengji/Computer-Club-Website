@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="UserEventsD.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <title>User Events</title>
+</head>
+<body>
+    <img class="background" src="bgall.png">
+    <header class="header"> 
+        <img class="lspu"src="lspu.png">
+        <img class="ccs"src="NewLogoCCS.png">
+    </header>
+    <div>
+        <nav onmousemove="moveHover(event)">
+            <a href="FrontPage.html" data-id="home" onclick="toggleStyle('home')">Home</a>
+            <a href="UserAbout.html" data-id="about" onclick="toggleStyle('about')">About</a>
+            <a href="UserEvents.html" data-id="events" onclick="toggleStyle('events')">Events</a>
+            <a href="Shop.html" data-id="merch" onclick="toggleStyle('merch')">Merch</a>
+            <a href="UserAccount.html" data-id="account" onclick="toggleStyle('account')">Account</a>
+            <div class="animation" id="nav-animation"></div>
+        </nav>
+    </div>
+
+    <h1>DEPARTMENT'S EVENTS</h1>
+
+    <div class="events-container">
+        <div class="event" onclick="toggleDetails(1)">
+            <a href="#">
+                <button class="button">
+                    <h2>CCS WEEK</h2>
+                    <p>Poster Making Contest</p>
+                </button>
+            </a>
+            <div class="details" id="details1">
+                <p>Details for event 1...</p>
+            </div>
+        </div>
+        <div class="event" onclick="toggleDetails(2)">
+            <a href="#">
+                <button class="button">
+                    <h2>CCS WEEK</h2>
+                    <p>Mobile Games Competition</p>
+                </button>
+            </a>
+            <div class="details" id="details2">
+                <p>Details for event 2...</p>
+            </div>
+        </div>
+        <div class="event" onclick="toggleDetails(3)">
+            <a href="#">
+                <button class="button">
+                    <h2>CCS WEEK</h2>
+                    <p>Parade</p>
+                </button>
+            </a>
+            <div class="details" id="details3">
+                <p>Details for event 3...</p>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <script>
+        function toggleStyle(targetId) {
+            const animation = document.getElementById('nav-animation');
+            const targetElement = document.querySelector(`[data-id="${targetId}"]`);
+
+            const leftOffset = targetElement.offsetLeft;
+            const width = targetElement.offsetWidth;
+
+            animation.style.left = leftOffset + 'px';
+            animation.style.width = width + 'px';
+            animation.style.display = 'block'; 
+        }
+
+        function moveHover(event) {
+            const animation = document.getElementById('nav-animation');
+            const navLinks = document.querySelectorAll('nav a');
+
+            let mouseX = event.pageX - event.currentTarget.offsetLeft;
+
+            let closestElement = null;
+            let minDistance = Infinity;
+
+            navLinks.forEach(link => {
+                const linkX = link.offsetLeft;
+                const linkWidth = link.offsetWidth;
+                const distance = Math.abs(mouseX - (linkX + linkWidth / 2));
+
+                if (distance < minDistance) {
+                    minDistance = distance;
+                    closestElement = link;
+                }
+            });
+
+            const leftOffset = closestElement.offsetLeft;
+            const width = closestElement.offsetWidth;
+
+            animation.style.left = leftOffset + 'px';
+            animation.style.width = width + 'px';
+        }
+    </script>
+</body>
+</html>

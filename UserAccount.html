@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="ShopD.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <title>CSS Shop</title>
+</head>
+<body>
+    <img class="background" src="bgall.png">
+    <div>
+        <nav onmousemove="moveHover(event)">
+            <a href="FrontPage.html" data-id="home" onclick="toggleStyle('home')">Home</a>
+            <a href="UserAbout.html" data-id="about" onclick="toggleStyle('about')">About</a>
+            <a href="UserEvents.html" data-id="events" onclick="toggleStyle('events')">Events</a>
+            <a href="Shop.html" data-id="merch" onclick="toggleStyle('merch')">Merch</a>
+            <a href="UserAccount.html" data-id="account" onclick="toggleStyle('account')">Account</a>
+            <div class="animation" id="nav-animation"></div>
+        </nav>
+    </div>
+    <header class="header"> 
+        <img class="lspu"src="lspu.png">
+        <img class="ccs"src="NewLogoCCS.png">
+    </header>
+    <script>
+        function toggleStyle(targetId) {
+            const animation = document.getElementById('nav-animation');
+            const targetElement = document.querySelector(`[data-id="${targetId}"]`);
+
+            const leftOffset = targetElement.offsetLeft;
+            const width = targetElement.offsetWidth;
+
+            animation.style.left = leftOffset + 'px';
+            animation.style.width = width + 'px';
+            animation.style.display = 'block'; // Show the animation
+        }
+
+        function moveHover(event) {
+            const animation = document.getElementById('nav-animation');
+            const navLinks = document.querySelectorAll('nav a');
+
+            let mouseX = event.pageX - event.currentTarget.offsetLeft;
+
+            let closestElement = null;
+            let minDistance = Infinity;
+
+            navLinks.forEach(link => {
+                const linkX = link.offsetLeft;
+                const linkWidth = link.offsetWidth;
+                const distance = Math.abs(mouseX - (linkX + linkWidth / 2));
+
+                if (distance < minDistance) {
+                    minDistance = distance;
+                    closestElement = link;
+                }
+            });
+
+            const leftOffset = closestElement.offsetLeft;
+            const width = closestElement.offsetWidth;
+
+            animation.style.left = leftOffset + 'px';
+            animation.style.width = width + 'px';
+        }
+    </script>
+    </body>
+    </html>
+    

@@ -1,0 +1,119 @@
+body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+}
+
+.background {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1; 
+    object-fit: cover;
+}
+.lspu {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    width: 55px; 
+    height: auto;
+}
+
+.ccs {
+    position: absolute;
+    top: 10px;
+    left: 90px;
+    width: 55px; 
+    height: auto;
+}
+
+
+h1 {
+    position: absolute;
+    font-size: 40px;
+    margin-left: 32%;
+    color: white;
+}
+
+nav {
+    margin: 10px auto 0;
+    position: relative;
+    width: 575px;
+    height: 50px;
+    background-color: #952323;
+    border-radius: 8px;
+    font-size: 0;
+}
+
+nav a {
+    line-height: 50px;
+    height: 100%;
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+nav .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    transition: all .5s ease 0s;
+    border-radius: 8px;
+    background-color: #EAD196; 
+}
+
+a {
+    width: 115px;
+}
+
+#nav-animation {
+    width: 100px;
+    left: 0;
+}
+
+.events-container {
+    margin-top: 100px;
+}
+
+.event {
+    width: 90%;
+    margin:  20px auto;
+    
+}
+
+.button {
+    width: 100%;
+    background-color: maroon;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+    background-color: rgba(128, 0, 0, 0.7);
+    color: white;
+}
+
+.details {
+    display: none;
+    background-color: white;
+    color: maroon;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.details p {
+    margin: 0;
+}

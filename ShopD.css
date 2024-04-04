@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.background {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1; 
+    object-fit: cover;
+}
+.lspu {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    width: 55px; 
+    height: auto;
+}
+
+.ccs {
+    position: absolute;
+    top: 10px;
+    left: 90px;
+    width: 55px; 
+    height: auto;
+}
+
+nav {
+    margin: 10px auto 0;
+    position: relative;
+    width: 575px;
+    height: 50px;
+    background-color: #952323;
+    border-radius: 8px;
+    font-size: 0;
+}
+
+nav a {
+    line-height: 50px;
+    height: 100%;
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+nav .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    transition: all .5s ease 0s;
+    border-radius: 8px;
+    background-color: #EAD196; /* Default background color */
+}
+
+a {
+    width: 115px;
+}
+
+#nav-animation {
+    width: 100px;
+    left: 0;
+}
+
+.announcement{
+    margin-top: 10px;
+    margin-left: 56px;
+    border-radius: 20px;
+    width: 91%;
+    height: 45%;
+    background-color: #E48F45;
+    position: absolute;
+}
+
+.announcement:hover {
+    background-color: #994D1C;
+    transition: background-color 0.3s ease;
+}
+
+.announcementtxt{
+    color: white;
+    margin-left: 500px; 
+    font-size: 40px;
+    text-decoration: none;
+}
+
+h1{
+    margin-left: 400px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+h4{
+    margin-left: 400px;
+    text-align: center;
+}
+
+.announcementpic{
+    position: absolute;
+    top: 11px;
+    left: 80px;
+    width: 300px; 
+}
+
+.shop-button {
+    display: flex;
+    flex-direction: column; 
+    width: 500px;
+    position: absolute;
+    bottom: 20px;
+    margin-left: 55px;
+}
+
+
+.shop-button a {
+    padding: 10px;
+    margin: 5px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #EAD196;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+}
+
+.shop-button .NC:hover {
+    background-color: #fff;
+    color:#952323;
+}
+
+.shop-button .NC {
+    background-color: #952323;
+    color: #fff;
+}
+
+.shop-button .R {
+    background-color: #fff;
+    color: #952323;
+}
+
+.shop-button .S {
+    background-color: #fff;
+    color: #952323;
+}
+
+.shop-button .YC {
+    background-color: #fff;
+    color: #952323;
+}
+
+.shop-button .R:hover{
+    background-color: #952323;
+    color: #fff;
+}
+
+.shop-button .S:hover{
+    background-color: #952323;
+    color: #fff;
+}
+
+.shop-button .YC:hover{
+    background-color: #952323;
+    color: #fff;
+}
+
+h4 a{
+    font-weight: 500;
+    color: #363636;
+    display: block;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.3s;
+}
+h4 a:hover{
+    color:#952323;
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 18px;
+}
+
+
